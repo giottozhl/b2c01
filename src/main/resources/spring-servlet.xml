@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd 
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd 
+           http://www.springframework.org/schema/mvc 
+           http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+           ">
+
+	<!-- Configures the @Controller programming model -->
+	<mvc:annotation-driven/>
+<!-- 	<mvc:default-servlet-handler/> -->
+<!-- 	<mvc:default-servlet-handler default-servlet-name="default"/> -->
+
+	<!-- 扫描classpath的包下的所有类，该包路径下的类可以不需要配置bean了 -->
+	<context:component-scan base-package="com.zhl.mall.*" />
+	
+	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/web/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC 
+"-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+		<!-- 打印查询语句 -->
+	<settings>
+		<setting name="logImpl" value="STDOUT_LOGGING" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias alias="UserModel" type="com.zhl.mall.sys.model.UserModel" />
+		<typeAlias alias="DictModel" type="com.zhl.mall.sys.model.DictModel" />
+		<typeAlias alias="ChinaModel" type="com.zhl.mall.sys.model.ChinaModel" />
+		<typeAlias alias="AddrModel" type="com.zhl.mall.sys.model.AddrModel" />
+		<typeAlias alias="ProductModel" type="com.zhl.mall.product.model.ProductModel" />
+		<typeAlias alias="ProductPicModel" type="com.zhl.mall.product.model.ProductPicModel" />
+		<typeAlias alias="OrderModel" type="com.zhl.mall.order.model.OrderModel" />
+		<typeAlias alias="OrderProdModel" type="com.zhl.mall.order.model.OrderProdModel" />
+		<typeAlias alias="OrderCarModel" type="com.zhl.mall.order.model.OrderCarModel" />
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="com/zhl/mall/sys/mapper/UserMapper.xml" />
+		<mapper resource="com/zhl/mall/sys/mapper/DictMapper.xml" />
+		<mapper resource="com/zhl/mall/sys/mapper/ChinaMapper.xml" />
+		<mapper resource="com/zhl/mall/sys/mapper/AddrMapper.xml" />
+		<mapper resource="com/zhl/mall/product/mapper/ProductMapper.xml" />
+		<mapper resource="com/zhl/mall/product/mapper/ProductPicMapper.xml" />
+		<mapper resource="com/zhl/mall/order/mapper/OrderMapper.xml" />
+		<mapper resource="com/zhl/mall/order/mapper/OrderProdMapper.xml" />
+		<mapper resource="com/zhl/mall/order/mapper/OrderCarMapper.xml" />
+	</mappers>
+</configuration>
